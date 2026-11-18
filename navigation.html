@@ -38,5 +38,29 @@
         <a href="#">Gallery</a>
         <a href="#">Contact_us</a>
     </div>
+
+    <section>
+       <center>
+         <img class="mySlides" src="pexels-mikhail-nilov-8389923.jpg" style="height: 500px; width: 100%;">
+        <img class="mySlides" src="pexels-mikhail-nilov-8389924.jpg" style="height: 500px; width: 100%;">
+        <img class="mySlides" src="pexels-mikhail-nilov-8390281.jpg" style="height: 500px; width: 100%;">
+       </center>
+    </section>
+     <script>
+         var myIndex = 0;
+         carousel();
+
+         function carousel() {
+             var i;
+             var x = document.getElementsByClassName("mySlides");
+             for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";  
+             }
+             myIndex++;
+             if (myIndex > x.length) {myIndex = 1}    
+             x[myIndex-1].style.display = "block";  
+             setTimeout(carousel, 3000);
+         }
+     </script>
 </body>
 </html>
